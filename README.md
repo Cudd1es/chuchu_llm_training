@@ -31,4 +31,6 @@ ollama create $MODEL_NAME -f $PATH_TO_MODELFILE/Modelfile
 
 to run it on ollama:
 
-`ollama run $MODEL_NAME`
+```
+ollama run $MODEL_NAME
+```
