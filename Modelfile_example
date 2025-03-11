@@ -1,0 +1,20 @@
+FROM /home/ansel/chuchu/model/unsloth.F16.gguf
+
+TEMPLATE """下面是一些描述一些任务的说明。编写适当完成每个请求的响应。{{ if .Prompt }}
+
+### 指令:
+{{ .Prompt }}{{ end }}
+
+### 回应:
+{{ .Response }}<eos>"""
+
+PARAMETER stop "[@BOS@]"
+PARAMETER stop "[toxicity=0]"
+PARAMETER stop "<eos>"
+PARAMETER stop "<unused"
+PARAMETER stop "		"
+PARAMETER stop "	"
+PARAMETER stop "\n"
+PARAMETER stop "#"
+PARAMETER temperature 1
+PARAMETER min_p 0.1
