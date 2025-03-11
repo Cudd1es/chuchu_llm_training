@@ -15,3 +15,20 @@ conda activate unsloth_env
 
 pip install unsloth
 ```
+
+
+to run the script:
+```
+conda activate unsloth_env
+python train.py
+```
+
+to load it to ollama:
+
+```
+ollama create $MODEL_NAME -f $PATH_TO_MODELFILE/Modelfile
+```
+
+to run it on ollama:
+
+ollama run $MODEL_NAME
